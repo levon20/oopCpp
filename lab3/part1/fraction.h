@@ -16,17 +16,25 @@ class Fraction
         Fraction Normalize();
 
         Fraction(int, int);
+        Fraction(int);
         Fraction();
 
-        Fraction operator +(Fraction&);
-        Fraction operator -(Fraction&);
-        Fraction operator *(Fraction&);
-        Fraction operator /(Fraction&);
+        Fraction operator +(Fraction);
+        Fraction operator -(Fraction);
+        Fraction operator *(Fraction);
+        Fraction operator /(Fraction);
 
-        Fraction operator +(int&);
-        Fraction operator -(int&);
-        Fraction operator *(int&);
-        Fraction operator /(int&);
+        Fraction operator +(int);
+        void operator += (Fraction);
+        Fraction operator -(int);
+        Fraction operator *(int);
+        Fraction operator /(int);
 };
 
-std::ostream& operator <<(std::ostream&, Fraction&);
+Fraction operator +(int, Fraction);
+Fraction operator -(int, Fraction);
+Fraction operator *(int, Fraction);
+Fraction operator /(int, Fraction);
+
+std::ostream& operator <<(std::ostream&, Fraction);
+int ABS(int);
