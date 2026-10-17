@@ -13,7 +13,7 @@ class Fraction
         void SetDenominator(int);
 
         double ToDouble();
-        Fraction Normalize();
+        Fraction Normalize(Fraction);
 
         Fraction(int, int);
         Fraction(int);
